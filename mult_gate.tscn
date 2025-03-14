@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwa23dk85r6i1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajm04"]
+size = Vector2(16, 16)
+
+[node name="mult_gate" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ajm04")
+
+[node name="sprites" type="Node" parent="."]

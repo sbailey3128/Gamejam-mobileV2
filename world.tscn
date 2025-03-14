@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://pxd0rgxmj0j4"]
+
+[ext_resource type="Shader" uid="uid://b07i71i5vf2rq" path="res://Scenes/scroll1.gdshader" id="1_5ukr8"]
+[ext_resource type="Texture2D" uid="uid://dem02hjruj3ju" path="res://Sprites/New Piskel-1.png (2).png" id="1_a02cp"]
+[ext_resource type="Texture2D" uid="uid://bu4f3c1hk8s4m" path="res://Sprites/New Piskel-1.png (3).png" id="2_go701"]
+[ext_resource type="Shader" uid="uid://dexg1vghwjtxa" path="res://Scenes/scroll2.gdshader" id="3_o06y3"]
+[ext_resource type="Shader" uid="uid://djmvh7y5f7je6" path="res://Scenes/scroll3.gdshader" id="4_k7acu"]
+[ext_resource type="Shader" uid="uid://ceioi3kt7f8pp" path="res://Scenes/scroll4.gdshader" id="5_5v1tr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0fj1v"]
+shader = ExtResource("1_5ukr8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikia7"]
+shader = ExtResource("3_o06y3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yui6"]
+shader = ExtResource("4_k7acu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
+shader = ExtResource("5_5v1tr")
+
+[node name="world" type="Node2D"]
+
+[node name="scrolling background" type="Node" parent="."]
+
+[node name="bg1" type="TextureRect" parent="scrolling background"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_0fj1v")
+offset_left = -600.0
+offset_top = -336.0
+offset_right = -273.0
+offset_bottom = 8.0
+texture = ExtResource("2_go701")
+metadata/_edit_use_anchors_ = true
+
+[node name="bg2" type="TextureRect" parent="scrolling background"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ikia7")
+offset_left = -600.0
+offset_top = 8.0
+offset_right = -273.0
+offset_bottom = 352.0
+texture = ExtResource("2_go701")
+
+[node name="bg3" type="TextureRect" parent="scrolling background"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_7yui6")
+offset_left = 272.0
+offset_top = -336.0
+offset_right = 599.0
+offset_bottom = 8.0
+texture = ExtResource("2_go701")
+
+[node name="bg4" type="TextureRect" parent="scrolling background"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c5t2i")
+offset_left = 272.0
+offset_top = 8.0
+offset_right = 599.0
+offset_bottom = 352.0
+texture = ExtResource("2_go701")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.10352e-05, -1.52588e-05)
+scale = Vector2(12, 20.5)
+texture = ExtResource("1_a02cp")
+
+[node name="Camera2D" type="Camera2D" parent="."]

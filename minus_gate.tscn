@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://boetmcf01msb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77alr"]
+size = Vector2(16, 16)
+
+[node name="minus_gate" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_77alr")
+
+[node name="sprites" type="Node" parent="."]
